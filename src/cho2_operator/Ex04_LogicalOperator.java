@@ -43,7 +43,7 @@ public class Ex04_LogicalOperator {
 		
 		System.out.println("Not 연산 수행 전:" + bool2);
 		bool2 = !bool2;
-		System.out.println("Not 연산 수행 gn:" + bool2);
+		System.out.println("Not 연산 수행 후:" + bool2);
 	}
 
 }
