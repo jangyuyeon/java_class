@@ -1,4 +1,5 @@
 package ch04_if;
+
 import java.util.Scanner;
 
 public class Ex04_IfExample {
@@ -17,20 +18,18 @@ public class Ex04_IfExample {
 		
 		if(num1 > 100 || num1 < 0) {
 			System.out.println("입력범위를 초과하였습니다.");
-		}if(num1 >= 90) {
-			num2 = "A";
-		}else if(num1 >= 80) {
-			num2 = "B";
-		}else if(num1 >= 70) {
-			num2 = "C";
-		}else if(num1 >= 60) {
-			num2 = "D";
-		}else {
-			num2 = "F";
-		}
+			if(num1 >= 90) {
+				num2 = "A";
+			}else if(num1 >= 80) {
+				num2 = "B";
+			}else if(num1 >= 70) {
+				num2 = "C";
+			}else if(num1 >= 60) {
+				num2 = "D";
+			}else {
+				num2 = "F";
+			}
 	}else {
-		System.out.println("입력범위를 초과하였습니다.");
-	}	
-	System.out.println("학점은" + num2 + "입니다.");
-	
-
+		System.out.println("입력범위를 초과하였습니다.");	
+		System.out.println("학점은" + num2 + "입니다.");
+	}
