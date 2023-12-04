@@ -1,5 +1,7 @@
 package ch05_SwitchCase;
 
+import java.util.Scanner;
+
 public class Ex04_SwitchClass {
     public static void main(String[] args) {
         /*
@@ -7,15 +9,14 @@ public class Ex04_SwitchClass {
          * 이 사전에는 딱 4개의 단어만 들어 있다.
          * desk(책상),chair(의자),monitor(모니터), mouse(마우스)
          *
-         * 프로그램을 실행하면 영어 단어를 입력 받고 위의 네 단어중 하날ㄹ 입력 했을 때 해당 의미를 출력해줌.
+         * 프로그램을 실행하면 영어 단어를 입력 받고 위의 네 단어중 하나를 입력 했을 때 해당 의미를 출력해줌.
          * 사전에 없는 단어를 입력하면 사전에 없는 단어 입니다 라고 출력
          *
          */
-        String desk = "책상";
-        String chair = "의자";
-        String monitor = "모니터";
-        String mouse = "마우스";
-        switch(monitor) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("단어를 입력해주세요.");
+        String world = scanner.next();
+        switch (world) {
             case "desk":
                 System.out.println("책상입니다.");
                 break;
