@@ -6,34 +6,16 @@ public class Ex06_review {
 
 	public static void main(String[] args) {
 		
-		/*
-		 * 중첩 if문을 적용한 학점 출력
-		 * 100점을 초과하거나 0점 미만의 점수를 입력하면 '입력범위를 초과하였습니다.'출력
-		 * 0~100 점 사이의 값을 입력했다면 앞의 예제에서 했던 학점 출력을 진행함.
-		 * 단, 각 조건마다 학점값을 출력하는 것이 아니라 학점 출력을 위한 print 문장은 한번만 사용
-		 */
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("점수: ");
-		int num1 = scanner.nextInt();
-		String num2 = "";
-		
-		if(num1 > 100 || num1 < 0) {
-			System.out.println("입력볌위를 초과하였습니다.");
-			
-		}else{
-		if(num1 >= 90) {
-			num2 = "A";
-		}else if(num1 >= 80) {
-			num2 = "B";
-		}else if(num1 >= 70) {
-			num2 = "A";
-		}else if(num1 >= 60) {
-			num2 = "D";;
-		}else {
-			num2 = "F";
-		}
-		System.out.println(num2);
-	}
+		// 산술연산자
+//		//**
+//		 *num1,num2 두개의 정수형 변수를 선언하고 값은 마음대로
+//		 *두 변수의 +, -, *, /, % 연산결과를 print()를 활용하여 출력해봐요.
+//		 *출력방법
+//		 *System.out.println(num1 + num2)
+//		 */
+//		int num1 = ();
+//		int num2 = ();
+//		System.out.println(num1 + num1);
 
 }
 }

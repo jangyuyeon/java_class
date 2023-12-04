@@ -12,24 +12,26 @@ public class Ex04_IfExample {
 		 * 단, 각 조건마다 학점값을 출력하는 것이 아니라 학점 출력을 위한 print 문장은 한번만 사용
 		 */
 		Scanner scanner = new Scanner(System.in);
-				System.out.println("점수: ");
+		System.out.println("점수: ");
 		int num1 = scanner.nextInt();
 		String num2 = "";
-		
-		if(num1 > 100 || num1 < 0) {
+
+		if (num1 > 100 || num1 < 0) {
 			System.out.println("입력범위를 초과하였습니다.");
-			if(num1 >= 90) {
+			if (num1 >= 90) {
 				num2 = "A";
-			}else if(num1 >= 80) {
+			} else if (num1 >= 80) {
 				num2 = "B";
-			}else if(num1 >= 70) {
+			} else if (num1 >= 70) {
 				num2 = "C";
-			}else if(num1 >= 60) {
+			} else if (num1 >= 60) {
 				num2 = "D";
-			}else {
+			} else {
 				num2 = "F";
 			}
-	}else {
-		System.out.println("입력범위를 초과하였습니다.");	
-		System.out.println("학점은" + num2 + "입니다.");
+		} else {
+			System.out.println("입력범위를 초과하였습니다.");
+			System.out.println("학점은" + num2 + "입니다.");
+		}
 	}
+}
