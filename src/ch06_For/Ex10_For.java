@@ -9,7 +9,7 @@ public class Ex10_For {
                 System.out.print(i + "x" + j +"="+(i*j));
                 System.out.println(("\t"));
             }
-                System.out.println();
+                //System.out.println();
                 System.out.println("\n");
         }
 
