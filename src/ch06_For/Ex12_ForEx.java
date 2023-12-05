@@ -14,7 +14,7 @@ public class Ex12_ForEx {
         int i = scanner.nextInt();
         int sum = 0;
         for(int x = 1; x <= i; x++ ){
-            if (x % 2 != 0 && x % 3 != 0 ){
+            if ((x % 2 != 0) && (x % 3 != 0)) {
                sum += i;
             }
         }
