@@ -7,6 +7,11 @@ public class Ex09_WhileEx {
          * 출력
          * 1+2+3+4+5+6+7+8+9+10=55
          */
-
+        int i = 1; int sum = 0;
+        while(i<=10){
+            System.out.println(sum);
+            i++;
+        }
     }
+
 }

@@ -11,6 +11,7 @@ public class Ex08_WhileEx {
         int i = 0;
         int sum = 0;
 
+
         while(true){
             if (sum != 100) {
                 i++;
