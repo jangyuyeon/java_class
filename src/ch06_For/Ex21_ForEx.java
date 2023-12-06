@@ -15,7 +15,7 @@ public class Ex21_ForEx {
         num = scanner.nextInt();
 
         for (int i = 1; i <= num; i++){
-            if ((i % 2 != 0) || (i % 3 != 0)) {
+            if ((i % 2 != 0) && (i   % 3 != 0)) {
                 System.out.println("i = " +i);
                 sum += i;
             }
