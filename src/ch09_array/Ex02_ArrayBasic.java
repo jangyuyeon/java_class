@@ -13,7 +13,7 @@ public class Ex02_ArrayBasic {
         System.out.println("numbers1[3] = " + numbers1[3]);
         System.out.println("numbers1[4] = " + numbers1[4]);
 
-        //for문을 이용해서 배열 데이터 출력
+        //for문을 이용해서 배열 데이터 출력//for문을 이용해서 배열 데이터 출력
         for(int i = 0; i < numbers1.length; i++){//numbers1.length 앞에 <=는 금지
             System.out.println("numbers1 = "+ numbers1[i]);
 
@@ -27,8 +27,8 @@ public class Ex02_ArrayBasic {
             System.out.println(avg);
 
         }
-
+        }
     }
-}
+
 
 

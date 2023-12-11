@@ -12,16 +12,17 @@ public class Ex10_ArrayEx {
         System.out.println("-------------------------------------------------");
         System.out.println("선택 >");
 
-        if (select == 1) ;{
+        if (select == 1) {
             System.out.println("학생수입력");
-        }else if (select == 2) {
+        } else if (select == 2) {
             System.out.println("2.점수입력");
         } else if (select == 3) {
             System.out.println("3.점수목록");
         } else if (select == 4) {
             System.out.println("4.분석");
-        }else
+        } else {
             System.out.println("5.종료");
         }
     }
+}
 
