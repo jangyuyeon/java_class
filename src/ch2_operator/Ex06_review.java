@@ -1,6 +1,4 @@
-package cho2_operator;
-
-import java.util.Scanner;
+package ch2_operator;
 
 public class Ex06_review {
 

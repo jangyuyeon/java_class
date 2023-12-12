@@ -4,7 +4,7 @@ import java.sql.SQLOutput;
 
 public class StudentMain {
     public static void main(String[] args) {
-        //Student 클래스 객체 선언
+        //Student 클래스 객체 선언(Student 클래스가 아닌 다른 클래스)
         Student student1 = new Student();
         //Student 클래스의 필드에 값 저장하기
         student1.studentName ="학생1";

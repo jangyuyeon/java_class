@@ -1,4 +1,4 @@
-package cho2_operator;
+package ch2_operator;
 
 public class Ex03_ComparisionOperator {
 

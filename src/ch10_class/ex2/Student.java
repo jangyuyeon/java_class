@@ -6,6 +6,5 @@ public class Student {
     String studentMajor;
     String studentMobile;
 
-
 }
 

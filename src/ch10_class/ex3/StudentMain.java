@@ -15,3 +15,4 @@ public class StudentMain {
         Student student4 = new Student("이름4","영어과", "010-8959-8686");
     }
 }
+
