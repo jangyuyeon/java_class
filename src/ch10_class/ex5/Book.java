@@ -26,8 +26,8 @@ public class Book {
     public Book(String bookTitle, String bookAuthor) {
         this.bookTitle = bookTitle;
         this.bookAuthor = bookAuthor;
-        System.out.println("book2.bookTitle =" + book2.bookTitle);
-        System.out.println("book2.bookAuthor = " + book2.bookAuthor);
+        System.out.println("bookTitle =" + bookTitle);
+        System.out.println("bookAuthor = " + bookAuthor);
     }
 
     //모든 필드값을 매개변수로 하는 생성자(매개변수값을 필드에 담아야함)
