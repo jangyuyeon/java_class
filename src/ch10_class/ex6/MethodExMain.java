@@ -16,15 +16,16 @@ public class MethodExMain {
         String result = methodEx.method3();
         System.out.println("result = " + result);
         System.out.println(methodEx.method3());
-        
+
         //method4 호출 후 결과값 출력
-    int result1 = methodEx.method4();
+        int result1 = methodEx.method4();
         System.out.println("result = " + result);
 
         //method5 호출 후 결과값 출력
-        String result2 = methodEx.method5("안녕",1000);
-        System.out.println("result2 = "+result2);
+        String result2 = methodEx.method5("안녕", 1000);
+        System.out.println("result2 = " + result2);
 
-
+        int result3 = methodEx.method6(10, 20);
+        System.out.println("result3 = " + result3);
     }
 }
