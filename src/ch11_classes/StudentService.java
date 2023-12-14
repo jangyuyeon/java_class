@@ -3,7 +3,7 @@ package ch11_classes;
 import ch11_array.ex2.Student;
 
 public class StudentService {
-    StudentRepository studentRepository = new StudentRepository()();
+    StudentRepository studentRepository = new StudentRepository();
     /**
      * method name: method1
      * parameter: x
