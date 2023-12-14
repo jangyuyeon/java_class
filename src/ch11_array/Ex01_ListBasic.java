@@ -55,7 +55,8 @@ public class Ex01_ListBasic {
         }
 
         //for each
-        for (String bb : strList){
+        for (String bb : strList) {
             System.out.println("bb= " + bb);
         }
     }
+}
