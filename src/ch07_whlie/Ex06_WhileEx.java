@@ -11,12 +11,11 @@ public class Ex06_WhileEx {
 
          */
 
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in); //스캐너로 출력하기
         int i = 0;
         System.out.println(i + "0");
         int count = 0;
         int avg = 0;
-
         int sum = 0;
 
         while (true) {
