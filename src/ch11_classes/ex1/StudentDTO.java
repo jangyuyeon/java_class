@@ -1,4 +1,4 @@
-package ch11_classes;
+package ch11_classes.ex1;
 
 public class StudentDTO {
     private Long id;
