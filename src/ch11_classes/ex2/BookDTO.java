@@ -1,7 +1,6 @@
 package ch11_classes.ex2;
 
 public class BookDTO {
-    public class BookDTO {
         /**
          * 도서 클래스
          * public Book Class
@@ -67,6 +66,18 @@ public class BookDTO {
             this.bookPublisher = bookPublisher;
         }
 
+
+        public BookDTO() {
+        }
+
+        private static Long idValue = 1L;
+        public BookDTO(String bookTitle, String bookAuthor, String bookPrice, String bookPublisher) {
+            this.id = idValue++;
+            this.bookTitle = bookTitle;
+            this.bookAuthor = bookAuthor;
+            this.bookPrice = bookPrice;
+            this.bookPublisher = bookPublisher;
+        }
         @Override
         public String toString() {
             return "BookDTO{" +
@@ -77,21 +88,8 @@ public class BookDTO {
                     ", bookPublisher='" + bookPublisher + '\'' +
                     '}';
         }
-
-        public BookDTO() {
-        }
-
-        private static Long idValue = 1L;
-
-        public BookDTO(String bookTitle, String bookAuthor, String bookPrice, String bookPublisher) {
-            this.id = idValue++;
-            this.bookTitle = bookTitle;
-            this.bookAuthor = bookAuthor;
-            this.bookPrice = bookPrice;
-            this.bookPublisher = bookPublisher;
-        }
     }
-}
+
 
 
 
