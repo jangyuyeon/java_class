@@ -16,8 +16,8 @@ public class Ex03_StringEx {
             world = scanner.next();
             System.out.println(world);
 
-            if (world.equals("종료")) {
-                run = false;
+            if (world.equals("종료")) {//만약에 world라는 변수값이 "종료"와 같다면
+                run = false; //run은 거짓이므로 멈추자
             }
         }
     }

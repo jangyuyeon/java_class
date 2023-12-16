@@ -12,12 +12,12 @@ public class Ex08_WhileEx {
         int sum = 0;
 
 
-        while(true){
-            if (sum != 100) {
-                i++;
-                if(i % 2 == 0 ){//만약에 아이라는 숫자가 음수, 짝수
-                    sum -= i;
-                } else{
+        while(true){ //진실인동안
+            if (sum != 100) {//만약 sum이 100이랑 같지 않으면
+                i++;            //i를 1씩 증가시켜주세요
+                if(i % 2 == 0 ){//i를 2로 나누면 나머지가 0 그래서 짝수구하는식
+                    sum -= i; //sum에서
+                } else{  //그밖에는
                     sum += i;
                 }
             }else{

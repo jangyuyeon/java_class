@@ -24,7 +24,7 @@ public class Ex01_ArrayBasic {
         numbers2 = new int[8];
         System.out.println("numbers2[0] = " + numbers2[0]);
 
-        // 10,20,30,40이 들어있는 number2 배열 선언
+        // 10,20,30,40이 들어있는 number3 배열 선언
         int[] numbers3 = {10,20,30,40};
 
         //"가',"나","다","라"rk emfdjdlTsms strings2 배열 선언

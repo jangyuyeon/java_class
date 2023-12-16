@@ -13,11 +13,11 @@ public class Ex04_ArrayEx {
          */
         Scanner scanner = new Scanner(System.in);
         System.out.println("숫자: ");
-        int number  = scanner.nextInt();
+        int number  = scanner.nextInt();//숫자 입력받기
 
         for (int i = 0; i < num.length; i++) {
-            if (number  == num[i]){
-                System.out.println(i);
+            if (number  == num[i]){ //만약 입력받은 숫자와 num배열 숫자가 일치하면
+                System.out.println(number + "는 " + i + " 번 인덱스에 있습니다."); //
             }
         }
     }
