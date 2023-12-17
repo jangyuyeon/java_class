@@ -26,7 +26,10 @@ public class BookDTO {
         private String bookPrice;
         private String bookPublisher;
 
-        public Long getId() {
+    public BookDTO(String bookTitle, String bookAuthor, int bookPrice, String bookPublisher) {
+    }
+
+    public Long getId() {
             return id;
         }
 
@@ -54,8 +57,8 @@ public class BookDTO {
             return bookPrice;
         }
 
-        public void setBookPrice(String bookPrice) {
-            this.bookPrice = bookPrice;
+        public void setBookPrice(int bookPrice) {
+            this.bookPrice = String.valueOf(bookPrice);
         }
 
         public String getBookPublisher() {
