@@ -1,42 +1,45 @@
-package ch11_classes.ex4;
+package ch11_classes.ex5;
+
+import ch11_classes.ex3.MemberService;
 
 import java.util.Scanner;
 
-public class BookMain {
+public class BoardMain {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         boolean run = true;
-        int selectNO = 0;
+        int selectNo = 0;
+        BoardService boardService = new BoardService();
+        MemberService memberService = new MemberService();
 
         while (run) {
             System.out.println("-----------------------------------------------------------------------------------------");
-            System.out.println("1.도서등록 | 2.도서목록 | 3.도서조회(id) | 4.도서조회(제목) | 5.가격수정 | 6.도서삭제 | 7.도서검색 | 0.종료");
+            System.out.println("1.회원가입 | 2.로그인 | 3.목록조회 | 4.정보수정 | 5.탈퇴 | 6.로그아웃 | 0.종료");
+            System.out.println("1.글작성 | 2.글목록 | 3.글조회 | 4.글수정 | 5.글삭제 | 6.검색 | 0.종료");
             System.out.println("-----------------------------------------------------------------------------------------");
             System.out.print("선택> ");
-            selectNO = scanner.nextInt();
+            selectNo = sc.nextInt();
             if (selectNo == 1) {
                 // 호출하는 문장 작성
-                bookService.save();
+                boardService.save();
             } else if (selectNo == 2) {
                 // 호출하는 문장 작성
-                bookService.findAll();
+                memberService.findAll();
             } else if (selectNo == 3) {
                 // 호출하는 문장 작성
-                bookService.findById();
+                boardService.findById();
             } else if (selectNo == 4) {
                 // 호출하는 문장 작성
-                bookService.findByTitle();
+                boardService.update();
             } else if (selectNo == 5) {
                 // 호출하는 문장 작성
+                boardService.delete();
             } else if (selectNo == 6) {
                 // 호출하는 문장 작성
-            } else if (selectNo == 7) {
-                // 호출하는 문장 작성
-                bookService.search();
+                boardService.search();
             } else if (selectNo == 0) {
                 run = false;
             }
-
         }
     }
 }

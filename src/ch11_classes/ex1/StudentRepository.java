@@ -5,7 +5,7 @@ import java.util.List;
 
 public class StudentRepository {
     //모든학생정보를 관리하는 저장소 역할의 리스트
-    //저장,수정,삭제 등의 처리는 Repository에서만 이루어지도록 하기 위해 ㅔ걒ㅁㅅㄷ
+    //저장,수정,삭제 등의 처리는 Repository에서만 이루어지도록 하기 위해 private
     //값을 계속 유지하기 위해 static
     private static final List<StudentDTO> studentDTOList = new ArrayList<>();
 
@@ -19,8 +19,9 @@ public class StudentRepository {
      * return:x
      * 실행내용: 전달받은 매개변수 값 출력
      */
-    public void method2(String str1) {
 
+
+    public void method2(String str1) {
         System.out.println("str1 = " + str1);
     }
 
@@ -34,8 +35,6 @@ public class StudentRepository {
     public boolean method3(StudentDTO studentDTO) { //(타입과 변수이름)
 
         System.out.println("StudentDTO = " + studentDTO);
-
-
         return studentDTOList.add(studentDTO);
     }
 

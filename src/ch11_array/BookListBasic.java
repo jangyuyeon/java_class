@@ -1,10 +1,9 @@
 package ch11_array;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Ex01_ListBasic {
+public class BookListBasic {
     public static void main(String[] args) {
         //정수를 담는 intList 선언
         List<Integer> intList = new ArrayList<>();

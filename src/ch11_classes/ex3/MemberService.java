@@ -9,17 +9,31 @@ import java.util.Scanner;
 public class MemberService {
     Scanner scanner = new Scanner(System.in);
     MemberRepository memberRepository = new MemberRepository();
+    private static String loginEmail = null;
 
     public void save() {
-        System.out.print("이메일: ");
-        String memberEmail = scanner.next();
+        //중복체크 결과를 담을 변수
+        boolean checkResult = false;
+        String memberEmail = null;
+        do {
+
+            System.out.print("이메일: ");
+            String memberEmail = scanner.next();
+
+            checkResult = memberRepository.emailCheck(memberEmail);
+            if(checkResult){
+
+            }else{
+                System.out.println("이미 사용중인 이메일입니다. 다른이메일을 입력해주세요");
+            }
+        }while(!checkResult); //checkResult 값이 false라면 계속 반복되도록
         System.out.print("비밀번호: ");
         String memberPassword = scanner.next();
         System.out.print("이름: ");
         String memberName = scanner.next();
         System.out.print("전화번호: ");
-        String memberMobile= scanner.next();
-        MemberDTO memberDTO = new MemberDTO(memberEmail,memberPassword,memberName,memberMobile);
+        String memberMobile = scanner.next();
+        MemberDTO memberDTO = new MemberDTO(memberEmail, memberPassword, memberName, memberMobile);
         boolean result = memberRepository.save(memberDTO);
         if (result) {
             System.out.println("회원가입 성공");
@@ -28,37 +42,64 @@ public class MemberService {
         }
     }
 
-    /**
-     * 회원목록 메서드
-     * name: findAll
-     * parameter: x
-     * return: x
-     * 실행내용
-     * Repository로 부터 목록을 리턴 받아서 목록에 있는 모든 정보를 출력
-     */
-    public void findAll() {
-        List<MemberDTO> memberDTOList = memberRepository.findAll();
-        for (MemberDTO memberDTO : memberDTOList) {
-            System.out.println("memberDTO = " + memberDTO);
+    public void ligin() {
+        System.out.println("이메일: ");
+        String memberEmail = scanner.next();
+        System.out.println("비밀번호: ");
+        String memberPassword = scanner.next();
+        MemberDTO loginResult = memberRepository.login(memberEmail, memberPassword);
+        if (loginResult != null) {
+            System.out.println("로그인 성공");
+            System.out.println(memberEmail + " 환영합니다.");
+            loginEmail = memberEmail;
+        } else {
+            System.out.println("이메일 또는 비밀번호가 틀립니다.");
+        }
+
+        public void findAll () {
+            List<MemberDTO> memberDTOList = memberRepository.findAll();
+            for (MemberDTO memberDTO : memberDTOList) {
+                System.out.println("memberDTO = " + memberDTO);
+            }
+        }
+
+        public void update () {
+            if (loginEmail != null) {
+                System.out.println("수정할 전화번호: ");
+                String mobile = scanner.next();
+                memberRepository.update(loginEmail, mobile);
+                if (result) {
+                    System.out.println("회원정보가 수정되었습니다.");
+                } else {
+                    System.out.println("수정실패");
+                }
+            } else {
+                System.out.println("로그인해주세요.");
+            }
+
+        }
+    }public  void delete(){
+        if(loginEmail != null){
+            System.out.println("진짜 탈퇴하실건가요?");
+            System.out.println("비밀번호: ");
+            String memberPassword = scanner.next();
+            MemberDTO memberDTO = memberRepository.login(loginEmail,memberPassword);
+            if(memberDTO != null){
+                boolean result = memberRepository.delete(loginEmail);
+                if(result){
+                    System.out.println("회원탈퇴가 정상적으로 처리되었습니다.그동안 감사했습니다.");
+
+                }else {
+                    System.out.println("탈퇴가 처리되지 않았습니다! 다시 시도해 주시기 바랍니다!");
+                }
+            } else {
+                System.out.println("비밀번호가 일치하지 않습니다! 메인메뉴로 돌아갑니다!");
+            }
+        } else {
+            System.out.println("로그인 해주세요!");
         }
     }
-    /**
-     * 회원조회 메서드
-     * name: findById
-     * parameter: x
-     * return: x
-     * 실행내용
-     * id를 입력받고 Repository로 부터 id에 해당 하는 멤버 정보를 출력
-     *
-     */
-    public void findById() {
-        System.out.print("조회 id: ");
-        Long id = scanner.nextLong();
-        MemberDTO memberDTO = memberRepository.findById(id);
-        if (memberDTO != null) {
-            System.out.println("로그인 성공");
-        } else {
-            System.out.println("로그인 실패");
-        }
+
+    public void findAll() {
     }
 }
